@@ -1,0 +1,258 @@
+/* General page styling */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #252525;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Entire page container */
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+
+    margin: 5px auto;
+
+    background-color: white;
+}
+
+
+/* Header */
+
+header {
+    background-color: #338526;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px 20px 12px;
+}
+
+
+.profile-image {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 2px solid white;
+}
+
+
+header h1 {
+    margin: 5px 0;
+
+    font-size: 30px;
+}
+
+
+header p {
+    margin: 5px 0;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    color: lightcyan;
+}
+
+
+/* Main page layout */
+
+.content {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    min-height: 570px;
+}
+
+
+/* Sidebar */
+
+aside {
+    padding: 25px 15px;
+
+    border-right: 1px solid #dddddd;
+}
+
+
+/* About Me section */
+
+.about-me {
+    background-color: #e4e9ef;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-me h3 {
+    margin-top: 0;
+
+    margin-bottom: 5px;
+}
+
+
+.about-me p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+/* Other sidebar sections */
+
+.sidebar-section {
+    border-left: 3px solid #4c9c3e;
+
+    padding-left: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.sidebar-section h3 {
+    margin: 0 0 8px;
+
+    color: #28731e;
+}
+
+
+.sidebar-section ul {
+    list-style-type: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.sidebar-section li {
+    margin-bottom: 5px;
+}
+
+
+.sidebar-section a {
+    text-decoration: none;
+
+    color: #0075bd;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.sidebar-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main blog area */
+
+main {
+    padding: 25px 30px;
+}
+
+
+/* Blog posts */
+
+article {
+    overflow: auto;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+article:last-child {
+    border-bottom: none;
+}
+
+
+article h2 {
+    margin: 0 0 3px;
+
+    color: #28731e;
+
+    font-size: 22px;
+}
+
+
+.post-info {
+    margin-top: 0;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+article p {
+    font-size: 14px;
+
+    line-height: 1.25;
+}
+
+
+/* Blog images */
+
+.blog-image {
+    width: 185px;
+    height: 110px;
+
+    object-fit: cover;
+}
+
+
+/* First image floats right */
+
+.blog-image.right {
+    float: right;
+
+    margin: 5px 0 15px 15px;
+}
+
+
+/* Second image floats left */
+
+.blog-image.left {
+    float: left;
+
+    margin: 5px 15px 15px 0;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1f6c1c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 14px;
+}
+
+
+footer p {
+    margin: 0;
+
+    font-size: 13px;
+}
