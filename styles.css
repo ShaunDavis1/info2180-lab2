@@ -1,16 +1,27 @@
-/* General page styling */
+/* Styles for the entire page */
 
 body {
     margin: 0;
     padding: 0;
 
-    background-color: #252525;
+    font-size: 18px;
+    color: #2D3748;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif;
+
+    background-color: #252525;
 }
 
 
-/* Entire page container */
+/* Main Page Grid*/
 
 .container {
     width: 95%;
@@ -19,15 +30,51 @@ body {
     margin: 5px auto;
 
     background-color: white;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    min-height: 100vh;
+}
+
+
+/*
+   Your HTML currently has aside and main inside
+   <div class="content">.
+
+   display: contents allows aside and main to
+   participate directly in the .container grid.
+*/
+
+.content {
+    display: contents;
 }
 
 
 /* Header */
 
 header {
-    background-color: #338526;
+    grid-area: header;
 
-    color: white;
+    background-color: #3C8527;
+
+    color: #FFFFFF;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
 
     text-align: center;
 
@@ -43,52 +90,47 @@ header {
 
     border-radius: 10px;
 
-    border: 2px solid white;
+    border: 2px solid #FFFFFF;
 }
 
 
 header h1 {
     margin: 5px 0;
 
-    font-size: 30px;
+    font-size: 39px;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    color: #FFFFFF;
 }
 
 
 header p {
     margin: 5px 0;
 
-    font-size: 14px;
+    font-size: 18px;
 
     font-style: italic;
 
-    color: lightcyan;
-}
-
-
-/* Main page layout */
-
-.content {
-    display: grid;
-
-    grid-template-columns: 220px 1fr;
-
-    min-height: 570px;
+    color: #FFFFFF;
 }
 
 
 /* Sidebar */
 
 aside {
+    grid-area: sidebar;
+
     padding: 25px 15px;
 
     border-right: 1px solid #dddddd;
 }
 
 
-/* About Me section */
+/* About Me Section */
 
 .about-me {
-    background-color: #e4e9ef;
+    background-color: #E2E8F0;
 
     padding: 10px;
 
@@ -100,22 +142,28 @@ aside {
     margin-top: 0;
 
     margin-bottom: 5px;
+
+    color: #333322;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
 }
 
 
 .about-me p {
     margin: 0;
 
-    font-size: 14px;
-
     line-height: 1.3;
 }
 
 
-/* Other sidebar sections */
+/* Social Media Archives*/
 
 .sidebar-section {
-    border-left: 3px solid #4c9c3e;
+    border-left: 3px solid #3C8527;
 
     padding-left: 12px;
 
@@ -126,7 +174,13 @@ aside {
 .sidebar-section h3 {
     margin: 0 0 8px;
 
-    color: #28731e;
+    color: #28651C;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
 }
 
 
@@ -147,9 +201,7 @@ aside {
 .sidebar-section a {
     text-decoration: none;
 
-    color: #0075bd;
-
-    font-size: 14px;
+    color: #2879B8;
 
     font-weight: bold;
 }
@@ -160,14 +212,16 @@ aside {
 }
 
 
-/* Main blog area */
+/* Main Content */
 
 main {
+    grid-area: main;
+
     padding: 25px 30px;
 }
 
 
-/* Blog posts */
+/* Blog Posts */
 
 article {
     overflow: auto;
@@ -188,29 +242,25 @@ article:last-child {
 article h2 {
     margin: 0 0 3px;
 
-    color: #28731e;
+    font-size: 34px;
 
-    font-size: 22px;
+    color: #28651C;
 }
 
 
 .post-info {
     margin-top: 0;
 
-    color: #777777;
-
-    font-size: 12px;
+    color: #667267;
 }
 
 
 article p {
-    font-size: 14px;
-
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 
-/* Blog images */
+/*Blog Images */
 
 .blog-image {
     width: 185px;
@@ -220,7 +270,7 @@ article p {
 }
 
 
-/* First image floats right */
+/* First blog image */
 
 .blog-image.right {
     float: right;
@@ -229,7 +279,7 @@ article p {
 }
 
 
-/* Second image floats left */
+/* Second blog image */
 
 .blog-image.left {
     float: left;
@@ -238,12 +288,14 @@ article p {
 }
 
 
-/* Footer */
+/*Style for the footer*/
 
 footer {
-    background-color: #1f6c1c;
+    grid-area: footer;
 
-    color: white;
+    background-color: #28651C;
+
+    color: #FFFFFF;
 
     text-align: center;
 
@@ -253,6 +305,4 @@ footer {
 
 footer p {
     margin: 0;
-
-    font-size: 13px;
 }
