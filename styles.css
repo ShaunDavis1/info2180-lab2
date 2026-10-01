@@ -46,14 +46,6 @@ body {
 }
 
 
-/*
-   Your HTML currently has aside and main inside
-   <div class="content">.
-
-   display: contents allows aside and main to
-   participate directly in the .container grid.
-*/
-
 .content {
     display: contents;
 }
